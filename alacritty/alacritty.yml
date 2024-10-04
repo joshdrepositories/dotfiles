@@ -1,0 +1,64 @@
+env:
+  TERM: xterm-256color
+window:
+  dimensions:
+    columns: 80
+    lines: 24
+  decorations: None
+  opacity: 0.9
+  padding:
+    x: 15
+    y: 15 
+  blur: true
+
+scrolling:
+  history: 5000
+
+draw_bold_text_with_bright_colors: false
+
+custom_cursor_colors: true
+
+colors:
+  normal:
+    red: '#eb0202'
+    green: '#018f52'
+  bright:
+    red: '#eb0202'
+    green: '#00ff73'
+  primary:
+    foreground: '#f2f7f7'
+    background: '#191c33'
+  cursor:
+    cursor: '#00ff80'
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+cursor:
+  vi_mode_style: Beam
+  style: Block
+  thickness: 0.1
+
+font:
+  normal:
+    family: ZedMono Nerd Font
+    style: Regular
+  bold:
+    family: ZedMono Nerd Font
+    style: Bold
+  italic:
+    family: ZedMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: ZedMono Nerd Font
+    style: Bold Italic
+  size: 15
+
+mouse:
+  hide_when_typing: true
+
+shell:
+  program: /usr/bin/zsh
+  #  args:
+  # - -c
+  # - "tmux attach -t mysession || tmux new -s mysession"

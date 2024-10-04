@@ -1,0 +1,33 @@
+## FUNCTIONS ##
+
+git_branch() {
+  # Check if we are in a git repository
+  git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
+
+  # Store the output of git status to avoid multiple calls
+  git_status=$(git status 2> /dev/null)
+  
+  # Get the current branch name
+  branch=$(git symbolic-ref --short HEAD 2> /dev/null)
+	[ -z "$branch" ] && branch="(detatched HEAD)"
+  branch_notation=" $branch"
+ 
+  # append git status condition to branch_notation
+  case "$git_status" in
+    *"ahead"*)
+      branch_notation="$branch_notation ";;
+    *"behind"*)
+      branch_notation="$branch_notation ";;
+    *"have diverged,"*)
+      branch_notation="$branch_notation ";;
+    *"up to date"*)
+      branch_notation="$branch_notation ";;
+    *"conflicts"*)
+      branch_notation="$branch_notation ";;
+  esac
+ 
+  printf "$git_status" | grep -Eq 'untracked|modified' && \
+    branch_notation="$branch_notation 󰦒"
+ 
+  printf "$branch_notation "
+}

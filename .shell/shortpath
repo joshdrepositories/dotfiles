@@ -1,0 +1,38 @@
+#!/bin/sh
+#pwd | sed "s|^$HOME|~|"; exit #uncomment for default current directory setup
+
+short_path () {
+  local IFS='
+'
+  # Replace the $HOME part of the current directory path with '~' and split the path into components.
+  dirs=$(pwd | sed "s|^$HOME|~|" | tr '/' '\n' )
+  # Get the total number of directories in the path.
+  num_dirs=$(echo "$dirs" | wc -l)
+  # fix bug when starting from / by setting to 1
+  c=1
+  # Loop through each directory component.
+  for d in $dirs; do
+    c=$((c + 1))
+    # subtract 1 if ~
+    [ $d = '~' ] && pth='~' && c=$((c - 1)) && continue
+    case "$1" in
+      last)
+        [ "$c" -eq "$num_dirs" ] && d="/$d" || d="/$(echo ${d#.} | cut -b1 )"
+        ;;
+      cur_dir)
+        [ "$c" -eq "$num_dirs" ] && pth="$d"
+        ;;
+      short)
+        d="/$(echo ${d#.} | cut -b1 )"
+        ;;
+    esac
+    # Append the current directory component to the path unless in 'last' mode.
+    [ "$1" != "cur_dir" ] && pth="${pth:+${pth}}${d}"
+  done
+  # If the path is empty (unlikely), set it to the root directory.
+  [ -z "$pth" ] && pth="/"
+  # Output the shortened path.
+  echo $pth
+}
+
+short_path last
