@@ -16,7 +16,7 @@ get_pwd () {
 
 PS1="%F{blue}%n\
 %F{cyan} \$(get_pwd)%f\
-%F{yellow}\$(git_branch)%f \
+%F{yellow}\$(git_branch)%f\
 %F{magenta}$%f "
 
 #colors
