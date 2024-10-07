@@ -45,7 +45,7 @@ alias dcdul="docker compose down && docker compose up -d && docker compose logs 
 alias gs="git status"
 alias gf="git fetch"
 alias gd="git diff"
-alias lockscreen="cinnamon-screensaver-command --lock"
+alias lockscreen="slock"
 
 # Set up the prompt - if you load Theme with zplugin as in this example, this will be overriden by the Theme. If you comment out the Theme in zplugins, this will be loaded.
 #autoload -Uz promptinit
