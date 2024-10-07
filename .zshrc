@@ -45,6 +45,8 @@ alias dcdul="docker compose down && docker compose up -d && docker compose logs 
 alias gs="git status"
 alias gf="git fetch"
 alias gd="git diff"
+alias gp="git push"
+alias ga="git add"
 alias lockscreen="slock"
 
 # Set up the prompt - if you load Theme with zplugin as in this example, this will be overriden by the Theme. If you comment out the Theme in zplugins, this will be loaded.
