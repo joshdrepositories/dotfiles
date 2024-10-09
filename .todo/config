@@ -1,7 +1,7 @@
 # === EDIT FILE LOCATIONS BELOW ===
 
 # Your todo.txt directory (this should be an absolute path)
-export TODO_DIR="/home/joshd97/Documents/todo"
+export TODO_DIR="$HOME/Documents/todo"
 #export TODO_DIR=${HOME:-$USERPROFILE}
 
 # Your todo/done/report.txt locations

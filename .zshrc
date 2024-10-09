@@ -1,13 +1,9 @@
 # Created by newuser for 5.9
 # Set path if required
-#export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
-export PATH=$HOME/src/lua-language-server/bin:$PATH
-
 
 source ~/.shell/commonrc
 
 #prompt
-
 setopt PROMPT_SUBST
 
 get_pwd () {
@@ -47,12 +43,6 @@ alias gf="git fetch"
 alias gd="git diff"
 alias gp="git push"
 alias ga="git add"
-alias lockscreen="slock"
-
-# Set up the prompt - if you load Theme with zplugin as in this example, this will be overriden by the Theme. If you comment out the Theme in zplugins, this will be loaded.
-#autoload -Uz promptinit
-#promptinit
-#prompt       # see Zsh Prompt Theme below
 
 # Use vi keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -90,7 +80,5 @@ zplug load --verbose > /dev/null
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-alias luamake="/home/joshd97/src/lua-language-server/3rd/luamake/luamake"
-
 # Created by `pipx` on 2024-09-25 03:18:24
-export PATH="$PATH:/home/joshd97/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
