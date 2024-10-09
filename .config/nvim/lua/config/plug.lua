@@ -12,6 +12,7 @@ Plug('preservim/nerdtree')
 Plug('neovim/nvim-lspconfig')
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
+Plug('norcalli/nvim-colorizer.lua')
 
 vim.call('plug#end')
 

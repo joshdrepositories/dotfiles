@@ -1,5 +1,5 @@
+require("config.plug")
 require("config.remap")
 require("config.set")
 require("config.colors")
-require("config.plug")
 require("lsp.config")

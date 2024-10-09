@@ -52,7 +52,7 @@ font:
   bold_italic:
     family: ZedMono Nerd Font
     style: Bold Italic
-  size: 15
+  size: 10
 
 mouse:
   hide_when_typing: true

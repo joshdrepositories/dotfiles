@@ -41,3 +41,5 @@ vim.opt.colorcolumn = "80"
 
 -- set window window title when vim is open
 vim.opt.title = true
+
+vim.opt.termguicolors = true
