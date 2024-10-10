@@ -3,6 +3,7 @@ local lspconfig = require('lspconfig')
 
 -- Example configuration for Python (pyright)
 lspconfig.pyright.setup{}
+
 lspconfig.ansiblels.setup{
   { "ansible-language-server", "--stdio" },
   { "yaml.ansible" },
