@@ -13,6 +13,7 @@ Plug('neovim/nvim-lspconfig')
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
 Plug('norcalli/nvim-colorizer.lua')
+Plug('lukas-reineke/indent-blankline.nvim')
 
 vim.call('plug#end')
 
@@ -20,3 +21,4 @@ require("config.harpoon")
 require("config.telescope")
 require("config.lualine")
 require("config.mason")
+require("config.indent-blankline")

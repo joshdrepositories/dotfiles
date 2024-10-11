@@ -37,7 +37,7 @@ vim.opt.wrap = true
 --vim.opt.updatetime = 1
 
 -- how many characters is "too long"
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 -- set window window title when vim is open
 vim.opt.title = true
