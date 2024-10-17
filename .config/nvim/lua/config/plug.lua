@@ -14,6 +14,7 @@ Plug('williamboman/mason-lspconfig.nvim')
 Plug('williamboman/mason.nvim')
 Plug('norcalli/nvim-colorizer.lua')
 Plug('lukas-reineke/indent-blankline.nvim')
+Plug('f-person/git-blame.nvim')
 
 vim.call('plug#end')
 
