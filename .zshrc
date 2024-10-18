@@ -64,6 +64,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-completions"
+zplug "marlonrichert/zsh-autocomplete"
 zplug "junegunn/fzf"
 
 # zplug - install/load new plugins when zsh is started or reloaded

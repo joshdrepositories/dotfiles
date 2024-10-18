@@ -26,6 +26,13 @@ vim.api.nvim_set_keymap('n', '<leader>qq', ':q!<CR>', { noremap = true, silent =
 -- EXIT VIM AND SAVE FILE --
 vim.api.nvim_set_keymap('n', '<leader>wq', ':wq<CR>', { noremap = true, silent = false})
 
+-- ADD/REMOVE "#" TO BEGINNING OF ALL LINES IN A PARAGRAPH --
+vim.api.nvim_set_keymap('n', '<leader>a#', ':norm vip<CR>:norm 0i# <CR>', { noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<leader>r#', ':norm vip<CR>:norm xx<CR>', { noremap = true, silent = false})
+
+-- ADD/REMOVE "--" TO BEGINNING OF ALL LINES IN A PARAGRAPH --
+vim.api.nvim_set_keymap('n', '<leader>a-', ':norm vip<CR>:norm 0i-- <CR>', { noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<leader>r-', ':norm vip<CR>:norm xxx<CR>', { noremap = true, silent = false})
 
 --FILE EXPLORER --
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Ex<CR>', { noremap = true, silent = false})
