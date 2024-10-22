@@ -4,7 +4,7 @@ window:
   dimensions:
     columns: 80
     lines: 24
-  decorations: None
+  decorations: none
   opacity: 0.9
   padding:
     x: 15
