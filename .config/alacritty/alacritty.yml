@@ -36,7 +36,8 @@ mouse_bindings:
 
 cursor:
   vi_mode_style: Beam
-  style: Block
+  style: 
+    shape: Block
   thickness: 0.1
 
 font:
@@ -59,6 +60,3 @@ mouse:
 
 shell:
   program: /usr/bin/zsh
-  #  args:
-  # - -c
-  # - "tmux attach -t mysession || tmux new -s mysession"

@@ -2,6 +2,7 @@
 # Set path if required
 
 source ~/.shell/commonrc
+export PYTHON=python3
 
 #prompt
 setopt PROMPT_SUBST
@@ -59,27 +60,18 @@ autoload -Uz compinit
 compinit
 
 # zplug - manage plugins
-source /usr/share/zplug/init.zsh && zplug update > /dev/null
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-completions"
-zplug "marlonrichert/zsh-autocomplete"
-zplug "junegunn/fzf"
+source /usr/share/zplug/init.zsh
 
-# zplug - install/load new plugins when zsh is started or reloaded
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:2
+zplug "zsh-users/zsh-completions", defer:2
+zplug "junegunn/fzf", defer:2
+
+# Check for updates only if more than 7 days have passed
+if [[ ! -f ~/.zplug_update_time ]] || (( $(date +%s) - $(stat -c %Y ~/.zplug_update_time) > 604800 )); then
+    zplug update
+    touch ~/.zplug_update_time
 fi
-zplug load --verbose > /dev/null
 
-# Set the style for vi mode indicator
-#zstyle ':vi-mode' vi_mode_style 'highlight'  # Options: none, highlight, bold
-
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-
-# Created by `pipx` on 2024-09-25 03:18:24
-export PATH="$PATH:$HOME/.local/bin"
+zplug load > /dev/null
