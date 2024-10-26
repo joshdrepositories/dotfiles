@@ -34,11 +34,11 @@ colors:
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
-cursor:
-  vi_mode_style: Beam
-  style: 
-    shape: Block
-  thickness: 0.1
+  # cursor:
+  #   vi_mode_style: Beam
+  #   style: 
+  #     shape: Block
+  #   thickness: 0.1
 
 font:
   normal:

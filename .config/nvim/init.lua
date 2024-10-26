@@ -6,7 +6,5 @@ require("config.set")
 require("config.colors")
 require("lsp.config")
 
--- Block cursor in normal mode
-vim.cmd('let &t_EI = "\\e[1 q"')
--- Beam cursor in insert mode
-vim.cmd('let &t_SI = "\\e[5 q"')
+-- insert mode beam cursor toggle
+vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25"

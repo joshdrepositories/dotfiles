@@ -2,7 +2,6 @@
 # Set path if required
 
 source ~/.shell/commonrc
-export PYTHON=python3
 
 #prompt
 setopt PROMPT_SUBST
@@ -63,9 +62,10 @@ compinit
 source /usr/share/zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-completions", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:2
-zplug "zsh-users/zsh-completions", defer:2
+zplug "marlonrichert/zsh-autocomplete", defer:2
 zplug "junegunn/fzf", defer:2
 
 # Check for updates only if more than 7 days have passed
