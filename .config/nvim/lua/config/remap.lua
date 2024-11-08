@@ -37,6 +37,7 @@ vim.api.nvim_set_keymap('n', '<leader>r-', ':norm vip<CR>:norm xxx<CR>', { norem
 --FILE EXPLORER --
 vim.api.nvim_set_keymap('n', '<leader>pv', ':Ex<CR>', { noremap = true, silent = false})
 vim.api.nvim_set_keymap('n', '<leader>pf', ':Telescope find_files<CR>', { noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<leader>ps', ':Telescope live_grep<CR>', { noremap = true, silent = false})
 
 -- NERDTree --
 vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeToggle<CR>', { noremap = true, silent = false})

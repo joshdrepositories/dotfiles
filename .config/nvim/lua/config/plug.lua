@@ -5,6 +5,7 @@ vim.call('plug#begin')
 
 Plug('nvim-lua/plenary.nvim')
 Plug('ThePrimeagen/harpoon')
+Plug('nvim-treesitter/nvim-treesitter')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
