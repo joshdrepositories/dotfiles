@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # 1) Get the list of changed files in the last merge
 changed_files=$(git diff --name-only ORIG_HEAD HEAD)
