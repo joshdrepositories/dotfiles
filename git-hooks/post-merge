@@ -1,0 +1,6 @@
+#!/bin/sh
+echo "======================================"
+echo "          Project PSA!"
+echo "1) Run 'npm install' if dependencies changed."
+echo "2) Check the updated docs in /docs for new features!"
+echo "======================================"
